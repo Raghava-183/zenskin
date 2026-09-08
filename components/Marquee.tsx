@@ -14,7 +14,7 @@ export function Marquee() {
   return (
     <div
       aria-hidden="true"
-      className="overflow-hidden border-b border-gold/30 bg-ink2 py-[11px]"
+      className="overflow-hidden border-y border-edgesoft bg-rosesoft py-3"
     >
       <div className="marquee-track">
         {/* rendered twice so the loop is seamless */}
@@ -22,10 +22,10 @@ export function Marquee() {
           ITEMS.map((item) => (
             <span
               key={`${pass}-${item}`}
-              className="px-[26px] font-ui text-[11.5px] whitespace-nowrap uppercase tracking-[0.24em] text-labelwhite/75"
+              className="px-[26px] font-body text-[11px] font-bold whitespace-nowrap uppercase tracking-[0.2em] text-rose"
             >
               {item}
-              <span className="ml-[26px] text-gold">❋</span>
+              <span className="ml-[26px] text-leaf">✿</span>
             </span>
           )),
         )}

@@ -27,9 +27,9 @@ const STATS = [
 export function ProofBand() {
   return (
     <div className="border-b border-edgesoft bg-bg2 py-14">
-      <div className="mx-auto max-w-[1160px] px-[22px]">
+      <div className="mx-auto max-w-[1120px] px-[22px]">
         <div className="mb-9 flex max-w-[52ch] flex-col gap-[10px]">
-          <span className="eyebrow text-goldtx">Not a launch — a move</span>
+          <span className="eyebrow text-label">Not a launch — a move</span>
           <h2 className="font-display text-[clamp(1.7rem,3.4vw,2.35rem)] font-semibold">
             Nine months on the shelf.
             <br />
@@ -52,12 +52,12 @@ export function ProofBand() {
               <dd className="font-display text-[2.5rem] font-semibold leading-none tracking-[-0.01em] tabular-nums text-tx">
                 {s.fig}
                 {s.sup ? (
-                  <sup className="ml-[2px] align-super text-[0.42em] font-medium text-accent">
+                  <sup className="ml-[2px] align-super text-[0.42em] font-medium text-rose">
                     {s.sup}
                   </sup>
                 ) : null}
               </dd>
-              <dt className="font-ui text-[10.5px] uppercase tracking-[0.18em] text-goldtx">
+              <dt className="font-ui text-[10.5px] uppercase tracking-[0.18em] text-label">
                 {s.cap}
               </dt>
               <p className="text-[0.88rem] leading-normal text-tx3">{s.sub}</p>

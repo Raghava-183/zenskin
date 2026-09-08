@@ -1,27 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Hanken_Grotesk, Jost } from "next/font/google";
+import { Fraunces, Mulish } from "next/font/google";
 import { SITE, money } from "@/lib/site";
 import "./globals.css";
 
-const bodoni = Bodoni_Moda({
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-bodoni",
+  axes: ["SOFT", "WONK", "opsz"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const hanken = Hanken_Grotesk({
+const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-hanken",
-  display: "swap",
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-jost",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-mulish",
   display: "swap",
 });
 
@@ -52,7 +46,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: SITE.brand,
-    title: `${SITE.brand} — wash the sun off`,
+    title: `${SITE.brand} — tan off, glow on`,
     description:
       `Aloe-led herbal face wash. ${SITE.volumeMl} ml, ${money(SITE.price)}. ` +
       `Over ${SITE.bottlesSold.toLocaleString("en-IN")} bottles sold. Order on WhatsApp.`,
@@ -67,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.brand} — wash the sun off`,
+    title: `${SITE.brand} — tan off, glow on`,
     description: `Aloe-led herbal face wash. ${SITE.volumeMl} ml, ${money(SITE.price)}.`,
     images: ["/og.png"],
   },
@@ -76,8 +70,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f2f6f1" },
-    { media: "(prefers-color-scheme: dark)", color: "#05132e" },
+    { media: "(prefers-color-scheme: light)", color: "#fff7f4" },
+    { media: "(prefers-color-scheme: dark)", color: "#221720" },
   ],
 };
 
@@ -134,7 +128,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${bodoni.variable} ${hanken.variable} ${jost.variable}`}
+      className={`${fraunces.variable} ${mulish.variable}`}
       suppressHydrationWarning
     >
       <head>

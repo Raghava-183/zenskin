@@ -54,9 +54,9 @@ const BENEFITS = [
 export function Benefits() {
   return (
     <section id="why" className="py-[74px]">
-      <div className="mx-auto max-w-[1160px] px-[22px]">
+      <div className="mx-auto max-w-[1120px] px-[22px]">
         <div className="mb-10 flex max-w-[60ch] flex-col gap-[14px]">
-          <span className="eyebrow text-accent">What it does</span>
+          <span className="eyebrow text-rose">What it does</span>
           <h2 className="font-display text-[clamp(2rem,4.2vw,2.9rem)] font-semibold tracking-[-0.012em]">
             Four things, done properly.
           </h2>
@@ -66,14 +66,14 @@ export function Benefits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 rounded-sm border border-edge bg-surface md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 rounded-card border border-edge bg-surface md:grid-cols-2 xl:grid-cols-4">
           {BENEFITS.map((b) => (
             <article
               key={b.key}
               className="flex flex-col gap-[11px] border-b border-edgesoft px-7 pt-[30px] pb-8 last:border-b-0 md:odd:border-r md:odd:border-edgesoft md:[&:nth-last-child(-n+2)]:border-b-0 xl:border-r xl:border-b-0 xl:last:border-r-0"
             >
               <svg
-                className="h-[26px] w-[26px] text-accent"
+                className="h-[26px] w-[26px] text-leaf"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -84,7 +84,7 @@ export function Benefits() {
               >
                 {ICONS[b.icon]}
               </svg>
-              <span className="font-ui text-[10.5px] uppercase tracking-[0.2em] text-goldtx">
+              <span className="font-ui text-[10.5px] uppercase tracking-[0.2em] text-label">
                 {b.key}
               </span>
               <h3 className="font-display text-[1.42rem] font-semibold tracking-[-0.006em]">

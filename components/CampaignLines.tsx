@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { SITE, money } from "@/lib/site";
 
 const LINES: { text: string; tag: string }[] = [
-  { text: "Wash the sun off.", tag: "Poster" },
+  { text: "Tan off. Glow on.", tag: "Poster" },
   { text: "Aloe does the work. You take the compliments.", tag: "Reel" },
   { text: `${SITE.volumeMl} ml of shade for your skin.`, tag: "Shelf-talker" },
   { text: "Bright skin isn't a filter. It's a habit.", tag: "Instagram" },
@@ -26,9 +26,9 @@ export function CampaignLines() {
     <>
       <hr className="border-0 border-t border-edgesoft" />
       <section id="lines" className="py-[74px]">
-        <div className="mx-auto max-w-[1160px] px-[22px]">
+        <div className="mx-auto max-w-[1120px] px-[22px]">
           <div className="mb-10 flex max-w-[60ch] flex-col gap-[14px]">
-            <span className="eyebrow text-accent">Campaign lines</span>
+            <span className="eyebrow text-rose">Campaign lines</span>
             <h2 className="font-display text-[clamp(2rem,4.2vw,2.9rem)] font-semibold tracking-[-0.012em]">
               Say it in one line.
             </h2>
@@ -76,7 +76,7 @@ function LineCard({ text, tag }: { text: string; tag: string }) {
   }
 
   return (
-    <div className="flex flex-col gap-[14px] rounded-sm border border-edge bg-surface px-[22px] pt-[22px] pb-4 transition-colors hover:border-accent">
+    <div className="flex flex-col gap-[14px] rounded-card border border-edge bg-surface px-[22px] pt-[22px] pb-4 transition-colors hover:border-rose">
       <q ref={quoteRef} className="font-display text-[1.34rem] leading-[1.3] tracking-[-0.004em] [quotes:none]">
         {text}
       </q>
@@ -88,7 +88,7 @@ function LineCard({ text, tag }: { text: string; tag: string }) {
           type="button"
           onClick={copy}
           className={`cursor-pointer px-[2px] py-[5px] font-ui text-[10.5px] uppercase tracking-[0.16em] hover:underline ${
-            label === "Copy" ? "text-accent" : "text-goldtx"
+            label === "Copy" ? "text-rose" : "text-label"
           }`}
         >
           {label}

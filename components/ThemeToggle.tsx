@@ -42,15 +42,15 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className="grid h-8 w-8 place-items-center rounded-sm border border-gold/40 text-goldhi transition-colors hover:bg-gold/15"
+      className="grid h-9 w-9 place-items-center rounded-pill border border-edge text-tx2 transition-colors hover:border-rose hover:text-rose"
     >
       {mode === "dark" ? (
         <svg
-          className="h-4 w-4"
+          className="h-[17px] w-[17px]"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.6"
           strokeLinecap="round"
           aria-hidden="true"
         >
@@ -59,11 +59,11 @@ export function ThemeToggle() {
         </svg>
       ) : (
         <svg
-          className="h-4 w-4"
+          className="h-[17px] w-[17px]"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.6"
           strokeLinejoin="round"
           aria-hidden="true"
         >
