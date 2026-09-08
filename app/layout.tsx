@@ -3,18 +3,19 @@ import { Fraunces, Mulish } from "next/font/google";
 import { SITE, money } from "@/lib/site";
 import "./globals.css";
 
+// Loaded as a variable font (no fixed `weight`), which is what lets us
+// ask for the SOFT and WONK axes. next/font rejects `axes` alongside a
+// static weight list.
 const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  axes: ["SOFT", "WONK", "opsz"],
+  axes: ["SOFT", "WONK"],
   variable: "--font-fraunces",
   display: "swap",
 });
 
 const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-mulish",
   display: "swap",
 });
